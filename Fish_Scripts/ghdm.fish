@@ -19,5 +19,5 @@ else
 end
 
 for url in $URL
-    fdm (DownloadFromGH (string split "/" $url))
+    fdm (DownloadFromGH (string split "/" $url))&>/dev/null &
 end

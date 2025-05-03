@@ -5,7 +5,7 @@
 
 function backup
     # Setting up directory structure
-    mkdir -p $DIR_PATH/ $DIR_PATH/fish/ $DIR_PATH/foot/ $DIR_PATH/hypr/custom/ $DIR_PATH/Code/User/
+    mkdir -p $DIR_PATH/ $DIR_PATH/fish/ $DIR_PATH/foot/ $DIR_PATH/hypr/custom/ $DIR_PATH/Code/User/ $DIR_PATH/pandoc
     # Backup .clang-format
     echo "Backing up .clang-format"
     cp ~/Documents/VSCode/.vscode/.clang-format $DIR_PATH/
@@ -26,13 +26,17 @@ function backup
     echo "Backing up ~/.config/starship.toml"
     cp -r ~/.config/starship.toml $DIR_PATH/
 
-    # Backup omf configs
+    # Backup fish configs
     echo "Backing up ~/.config/fish/"
     cp -r ~/.config/fish/ $DIR_PATH/
 
     # Backup omf configs
     echo "Backing up ~/.config/omf/"
     cp -r ~/.config/omf/ $DIR_PATH/
+
+    # Backup pandoc configs
+    echo "Backing up ~/.config/pandoc/"
+    cp -r ~/.config/pandoc/ $DIR_PATH/
 end
 
 function setup
