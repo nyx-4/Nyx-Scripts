@@ -239,3 +239,6 @@ int main()
     
 }
 ```
+## Problem 5 (I am out of ideas)
+1. What are friend classes?  
+2. What does the *final* keyword do?  
