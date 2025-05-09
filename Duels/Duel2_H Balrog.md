@@ -1,4 +1,4 @@
-# Duel1: Balrog _(Don't trust friends, use enemies)_  
+# Duel2: Balrog _(Don't trust friends, use enemies)_  
 ```
 Copyright (C) 2025 Nyx-4 <241463@students.au.edu.pk>  
 
@@ -20,7 +20,7 @@ using namespace std;
 class class1 { public: int a = 5; void show() { cout << a; } void printName() { cout << "\nClass 1\n"; } };
 class class2 { public: int a = 7; void show() { cout << a; } void printName() { cout << "\nClass 2\n"; } };
 
-void snippet2() {
+void snippet1() {
     void* ptr_Class = (new class1, new class2);
     ((class1*) (ptr_Class))->show();
     ((class1*) (ptr_Class))->printName();
@@ -34,26 +34,26 @@ void snippet2() {
 }
 
 //: Snipper 3
-int snippet3() {
+void snippet3() {
     bool b = false;
     cout << ++b;
 }
 
 //: Snipper 4
-int snippet4() {
+void snippet4() {
     char Str[3] = "Pie";
     cout << Str;
 }
 
 //: Snipper 5
-int snippet5() {
+void snippet5() {
     unsigned char arr[3][4][5];
     unsigned char **arr2 = arr[2];
     cout << (arr2[0][1] == arr[2][0][1]);
 }
 
 //: Snipper 6
-int snippet6() {
+void snippet6() {
     int arr = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 0 };
     cout << 3[arr];
 }
@@ -61,7 +61,7 @@ int snippet6() {
 //: Snipper 7
 struct Bit { int b : 2 = 1; };
 
-int snippet7() {
+void snippet7() {
     Bit bit;
     cout << ++bit.b;
 }
@@ -76,7 +76,7 @@ struct Bit {
 void show (Bit b) { cout << "\nA = " << b.a << ", B = " << b.b << ", C = " << b.c; }
 
 // Tell which of these assignment is valid, and what is the output of show(Bit) for valid assignments.
-int snippet8() {
+void snippet8() {
     Bit bit0 = {.a = 0, .b = 0.0, .c = "0"};
     Bit bit1 = {b: 0, c: "0"};
     Bit bit2 = {.b = 0.0, .c = "0"};
@@ -100,6 +100,13 @@ Input:  `rules`         - The three rules that a virus has in its gene.
         `goldenRoom`    - The room number of person with most money.
 Output: `roomNumbers`   - All rooms that will be affected.
 
+Example:
+```abc
+Enter rules: +1 x2 x3
+Enter goldenRoom: 96234
+
+Virus PATH is: 1 3 9 10 11 22 66 198 594 1782 5346 16038 16039 32078 96234
+```
 
 ## Problem 3 _(Primitive Calculator)_
 _Spinoff_: You own a hotel, and want to calculate more advanced maths (containing only +, -, *, / and some variables). You can't compiler (or library function) because the Open-source license don't permit it.  
@@ -108,6 +115,12 @@ Input:  `mathString`    - A string containing a math problem consisting of digit
 Output: `totalBill`     - Total bill calculated as given in string.  
 
 Constraints: You can't use any library functions (except those that don't solve it in one-go like strlen).  
+
+Example:
+```abc
+Enter mathString: 4+5*($-10)/2
+Total bill is: 104
+```
 
 ## Problem 4 _(Google Search)_
 _Spinoff_: You own a hotel which has many tourist. You want a search feature in your computer, but the problem is that most tourist are foreign. You have a search function in your computer, but often tourist don't know exactly what they are looking for and only have a vague idea of their friend name.  
@@ -118,6 +131,24 @@ Example: The input _divn_ can give (in order) divn, Divn, sadivn, Sladivnal, Sal
 
 Constrait: If multiple strings gives same heuristic value they should come in alphabetical order. The exact sub-string match should come before non-exact sub-string match. The string in which `nameGiven` comes before, gets higher score in heuristic function (e.g., sadivn comes before Aladivn, because sa is smaller then Ala).
 
+Example:
+```abc
+Enter name: divn
+Names in order are:
+1. divn
+2. Divn
+3. sadivn
+4. Sladivnal
+.
+.
+.
+9. Daeivarn
+   sadu-invehn
+   sadu-uinvehn
+   .
+   .
+   .
+```
 
 ## Problem 5 _($$$ is everything)_
 _Spinoff_: You own a hotel which serves tourist well. The tourist usually pay daily morning in cash, and often get coins as change. You have received complaints that tourist are often given alot of coins, which they find hard to manage. So, you want that each tourist should get minimum number of coins.  
@@ -128,11 +159,24 @@ Return: `coins`         - An array containing struct `{valueOfCoin, numberOfCoin
 
 Constrints: The program should return minimum number of coins, such that the sum of all coins given back is exactly `moneyChange` and no coin is used more than the quantity it is present.  
 
+Example:
+```abc
+Enter moneyChange: $129
+Enter coins ($ <ENTER> to exit):
+5 1
+4 2
+10 5
+20 5
+25 2
+$
+
+Give change as: 25 25 20 20 20 10 5 4
+```
 
 ## Problem 6 _(Management, not my type)_
 _Spinoff_: You own a hotel which has _N_ rooms. The tourist like to rent room from your hotel for some time (unknown at moment). Some tourist comes in group, so they want consecutive rooms. Also provide a way to free room after tourist departs.  
 
-Input: `roomWanted` - The number of room that tourist wants to book  
+Input: `roomsWanted` - The number of room that tourist wants to book  
 Return: `firstRoom` - The location of first allocated room, as assigned rooms are consective.  
         `0`         - If consective rooms are not available  
 
@@ -140,3 +184,11 @@ Input: `firstRoom`  - The location of first allocated room, all room assigned in
 Return: `void`      - No need to output anything.  
 
 Constraints: The program should use **minimum RAM**, and provide fast allocation of rooms.
+
+Example:
+```abc
+Enter roomsWanted: #5
+Your 5 rooms starts from #173
+
+Thanks for choosing \033[1;4mNyx-Hotel!!\033[11;14m
+```
