@@ -37,3 +37,69 @@ int main()
     Program2 pg2;
 }
 ```
+
+## Problem 2:
+Predict the output and thus the order of constructor and destructor calls. Will there be any errors or warnings?
+```cpp
+#include <iostream>
+
+using namespace std;
+
+class A
+{
+    public:
+    A()
+    {
+        cout << "Constructor A" << endl;
+    }
+
+    ~A()
+    {
+        cout << "Destructor A" << endl;
+    }
+};
+
+class B: public A
+{
+    public:
+    B()
+    {
+        cout << "Constructor B" << endl;
+    }
+};
+
+class C: public B, public A
+{
+    public:
+    C()
+    {
+        cout << "Constructor C" << endl;
+    }
+
+    ~C()
+    {
+        cout << "Destructor C" << endl;
+    }
+};
+
+class D: public B, public C, public A
+{
+    public:
+    D()
+    {
+        cout << "Constructor D" << endl;
+    }
+
+    ~D()
+    {
+        cout << "Destructor D" << endl;
+    }
+};
+
+
+int main()
+{
+    D *d = new D();
+    delete d;
+}
+```
