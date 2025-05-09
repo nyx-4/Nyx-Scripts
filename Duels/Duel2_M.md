@@ -1,6 +1,6 @@
 ## Problem 1:
 Predict the output. Will there be any compile-time or runtime errors?
-```
+```cpp
 #include <iostream>
 
 using namespace std;
