@@ -190,3 +190,52 @@ int main()
     delete a;
 }
 ```
+
+## Problem 4
+```cpp
+#include <iostream>
+
+using namespace std;
+
+class A
+{
+    public:
+    A()
+    {
+        cout << "A constructor" << endl;
+    }
+
+    ~A()
+    {
+        cout << "A destructor" << endl;
+    }
+};
+
+class B: public A
+{
+    public:
+    B()
+    {
+        cout << "B constructor" << endl;
+    }
+
+    ~B()
+    {
+        cout << "B destructor" << endl;
+    }
+};
+
+
+int main()
+{
+    A **class_ptrs = new A*[3];
+
+    for(int i = 0; i < 3; i++)
+    {
+        class_ptrs[i] = new B();
+    }
+
+    //Code the proper way (no memory leaks) to free all objects (you are allowed to modify the classes A and B to achieve this task)
+    
+}
+```
