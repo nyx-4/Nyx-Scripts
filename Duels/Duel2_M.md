@@ -74,6 +74,7 @@ class C: public B, public A
     C()
     {
         cout << "Constructor C" << endl;
+        B b;
     }
 
     ~C()
