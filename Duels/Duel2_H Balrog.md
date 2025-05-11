@@ -183,7 +183,7 @@ Return: `firstRoom` - The location of first allocated room, as assigned rooms ar
 Input: `firstRoom`  - The location of first allocated room, all room assigned in group should also be freed.  
 Return: `void`      - No need to output anything.  
 
-Constraints: The program should use **minimum RAM**, and provide fast allocation of rooms.
+Constraints: The program should use **minimum RAM**, and provide fast allocation of rooms. Assume that mostly tourist comes in large groups with friends and family (average tourist allocates around a hundred rooms).
 
 Example:
 ```abc

@@ -76,70 +76,40 @@ Predict the order of constructor and destructor calls. Are there any memory leak
 #include <iostream>
 using namespace std;
 
-class A
-{
-    public:
-    A()
-    {
-        cout << "Constructor A" << endl;
-    }
+class A {
+  public:
+    A() { cout << "Constructor A" << endl; }
 
-    ~A()
-    {
-        cout << "Destructor A" << endl;
-    }
+    ~A() { cout << "Destructor A" << endl; }
 };
 
-class B
-{
-    public:
-    B()
-    {
-        cout << "Constructor B" << endl;
-    }
+class B {
+  public:
+    B() { cout << "Constructor B" << endl; }
 
-    virtual ~B()
-    {
-        cout << "Destructor B" << endl;
-    }
+    virtual ~B() { cout << "Destructor B" << endl; }
 };
 
-class C: public A, public B
-{
-    public:
-    C()
-    {
-        cout << "Constructor C" << endl;
-    }
+class C : public A, public B {
+  public:
+    C() { cout << "Constructor C" << endl; }
 
-    ~C()
-    {
-        cout << "Destructor C" << endl;
-    }
+    ~C() { cout << "Destructor C" << endl; }
 };
 
-class D: public C
-{
-    public:
-    D()
-    {
-        cout << "Constructor D" << endl;
-    }
+class D : public C {
+  public:
+    D() { cout << "Constructor D" << endl; }
 
-    ~D()
-    {
-        cout << "Destructor D" << endl;
-    }
+    ~D() { cout << "Destructor D" << endl; }
 };
 
-class E: public C
-{
-public:
-E() { cout << "Constructor E" << endl; }
+class E : public C {
+  public:
+    E() { cout << "Constructor E" << endl; }
 
-~E() { cout << "Destructor E" << endl; }
-}
-;
+    ~E() { cout << "Destructor E" << endl; }
+};
 
 int main() {
     B *b = new E();
