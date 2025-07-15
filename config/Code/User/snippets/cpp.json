@@ -46,9 +46,9 @@
         "body": [
             "",
             "${1:int} ${2:varName};",
-            "$1 get$2() { return this->$2; }",
+            "$1 get$2() const { return this->$2; }",
             "void set$2($1 $2) { this->$2 = $2; }",
-            "// cout << \"\\n$2 = \" << this->get$2();",
+            "// cout << \"\\n$2: \\t\\t\" << this->get$2();",
             "",
         ],
         "description": "Getter and Setter",

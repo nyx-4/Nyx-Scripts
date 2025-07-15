@@ -1,3 +1,7 @@
+li code {
+    background-color: #ffff00c0;
+}
+
 code {
     white-space: pre-wrap;
 }

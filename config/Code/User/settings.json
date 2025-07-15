@@ -30,14 +30,14 @@
     "C_Cpp.vcFormat.indent.caseLabels": true,
     "code-runner.enableAppInsights": false,
     "code-runner.executorMap": {
+        "c": "cd $dir && gcc '$fileName' -o '$fileNameWithoutExt' && ./'$fileNameWithoutExt' && rm '$fileNameWithoutExt'",
+        "cpp": "cd $dir && g++ '$fileName' -o '$fileNameWithoutExt' -std=c++23 && ./'$fileNameWithoutExt' && rm '$fileNameWithoutExt'",
+        "python": "cd $dir && mypy '$fileName' && python -u '$fileName'",
         "javascript": "node",
         "java": "cd $dir && javac $fileName && java $fileNameWithoutExt",
-        "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt && ./$fileNameWithoutExt && rm $fileNameWithoutExt",
         "zig": "zig run",
-        "cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt && ./$fileNameWithoutExt && rm $fileNameWithoutExt",
         "objective-c": "cd $dir && gcc -framework Cocoa $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
         "php": "php",
-        "python": "python -u",
         "perl": "perl",
         "perl6": "perl6",
         "ruby": "ruby",
@@ -119,7 +119,8 @@
     "workbench.editorAssociations": {
         "{hexdiff}:/**/*.*": "hexEditor.hexedit",
         "*.psf": "hexEditor.hexedit",
-        "*.o": "hexEditor.hexedit"
+        "*.o": "hexEditor.hexedit",
+        "*.bin": "hexEditor.hexedit"
     },
     "code-runner.executorMapByFileExtension": {
         ".fish": "fish",
@@ -163,4 +164,38 @@
     "css.format.spaceAroundSelectorSeparator": true,
     "less.format.spaceAroundSelectorSeparator": true,
     "scss.format.spaceAroundSelectorSeparator": true,
+    "workbench.editor.empty.hint": "hidden",
+    "asm-code-lens.enableCodeLenses": false,
+    "asm-code-lens.donated": true,
+    "vim.camelCaseMotion.enable": true,
+    "zenMode.hideLineNumbers": false,
+    "window.controlsStyle": "hidden",
+    "workbench.navigationControl.enabled": false,
+    "chat.commandCenter.enabled": false,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "C_Cpp.default.cppStandard": "c++23",
+    "C_Cpp.default.cStandard": "c23",
+    "terminal.integrated.minimumContrastRatio": 0,
+    "python.analysis.typeCheckingMode": "standard",
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter"
+    },
+    "black-formatter.args": [
+        "-l 80"
+    ],
+    "python.analysis.autoFormatStrings": true,
+    "python.analysis.autoImportCompletions": true,
+    "python.analysis.completeFunctionParens": true,
+    "python.analysis.generateWithTypeAnnotation": true,
+    "python.analysis.inlayHints.functionReturnTypes": true,
+    "python.analysis.inlayHints.pytestParameters": true,
+    "python.analysis.inlayHints.variableTypes": true,
+    "python.analysis.typeEvaluation.enableReachabilityAnalysis": true,
+    "python.analysis.typeEvaluation.strictDictionaryInference": true,
+    "python.analysis.typeEvaluation.strictListInference": true,
+    "python.analysis.typeEvaluation.strictSetInference": true,
+    "snippet.verbose": true,
+    "snippet.defaultLanguage": "python",
+    "snippet.insertWithDoubleClick": true,
+    "editor.mouseWheelZoom": true,
 }

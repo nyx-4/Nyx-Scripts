@@ -1,48 +1,37 @@
 #!/usr/bin/fish
 
-# This files backups my config files to this repo.
-# It over-writes my previous configs.
+set DIR_PATH $HOME'/Documents/VSCode/Lessons/Nyx-Scripts/config'
+set _files \
+    $HOME'/Documents/VSCode/.vscode/.clang-format' \
+    $HOME'/.config/foot/foot.ini' \
+    $HOME'/.config/starship.toml' \
+    $HOME'/.config/fish/' \
+    $HOME'/.config/omf/' \
+    $HOME'/.config/pandoc/' \
+    $HOME'/.config/ags/scripts/templates/terminal/sequences.txt' \
+
+set Code_User \
+    $HOME'/.config/Code/User/settings.json' \
+    $HOME'/.config/Code/User/keybindings.json' \
+    $HOME'/.config/Code/User/snippets/' \
+    $HOME'/.config/Code/User/tasks.json' \
+
+set hypr_custom \
+    $HOME'/.config/hypr/custom/' \
+
 
 function backup
-    # Setting up directory structure
-    mkdir -p $DIR_PATH/ $DIR_PATH/fish/ $DIR_PATH/foot/ $DIR_PATH/hypr/custom/ $DIR_PATH/Code/User/ $DIR_PATH/pandoc
-    # Backup .clang-format
-    echo "Backing up .clang-format"
-    cp ~/Documents/VSCode/.vscode/.clang-format $DIR_PATH/
-
-    # Backup VSCode snippets and settings
-    echo "Backing up ~/.config/Code/User"
-    cp -r -t $DIR_PATH/Code/User/ ~/.config/Code/User/keybindings.json ~/.config/Code/User/settings.json ~/.config/Code/User/snippets/ ~/.config/Code/User/tasks.json
-
-    # Backup hyprland custom configs
-    echo "Backing up ~/.config/hypr/custom/"
-    cp -r ~/.config/hypr/custom/ $DIR_PATH/hypr/custom/
-
-    # Backup foot configs
-    echo "Backing up ~/.config/foot/foot.ini"
-    cp -r ~/.config/foot/foot.ini $DIR_PATH/foot/
-
-    # Backup starship.toml
-    echo "Backing up ~/.config/starship.toml"
-    cp -r ~/.config/starship.toml $DIR_PATH/
-
-    # Backup fish configs
-    echo "Backing up ~/.config/fish/"
-    cp -r ~/.config/fish/ $DIR_PATH/
-
-    # Backup omf configs
-    echo "Backing up ~/.config/omf/"
-    cp -r ~/.config/omf/ $DIR_PATH/
-
-    # Backup pandoc configs
-    echo "Backing up ~/.config/pandoc/"
-    cp -r ~/.config/pandoc/ $DIR_PATH/
+    echo "Backing up" $argv[1]
+    cp -r $argv[1] $argv[2]
 end
 
-function setup
+mkdir -p $DIR_PATH/ $DIR_PATH/Code/User/ $DIR_PATH/hypr/ 
 
-end
+for file in $_files;      backup $file $DIR_PATH;                end;
+for file in $Code_User;   backup $file $DIR_PATH'/Code/User/';   end;
+for file in $hypr_custom; backup $file $DIR_PATH'/hypr/'; end;
 
-set DIR_PATH ~/Documents/VSCode/Lessons/Nyx-Scripts/config
-backup
+
+set -e files
 set -e DIR_PATH
+

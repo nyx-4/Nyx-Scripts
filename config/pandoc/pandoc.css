@@ -11,7 +11,7 @@ Theme Name: Linux Academy Study Guide Template 11-15-2019
     padding: 0cm;
     border-left-style: none;
     background: none;
-    background: url("/home/KaraKurt/Documents/VSCode/Lessons/Notes/OOPs/imgs/image-4.png") no-repeat center;
+    background: url("/home/KaraKurt/Pictures/Screenshots/AU.png") no-repeat center;
     background-size: 10cm;
     background-position: top 1cm center;
     margin: 3cm;
@@ -75,7 +75,7 @@ Theme Name: Linux Academy Study Guide Template 11-15-2019
     padding: .5cm;
     border-left-style: solid;
     border-left-width: 1px;
-    border-color: #eee;
+    border-color: #cccccc;
 
     @top-left {
         background: #000;
@@ -339,7 +339,7 @@ when I revisit it
 
 a:link {
     outline: none;
-    color: #000;
+    color: #BA9AF0;
     font-weight: bold;
 }
 
@@ -481,6 +481,7 @@ h6 {
     font-size: 1.1em;
 }
 
+/*
 h1 code {
     background: none;
 }
@@ -504,6 +505,7 @@ h5 code {
 h6 code {
     background: none;
 }
+*/
 
 /*---------------------------------------- NAV (also known as Table of Contents) -----------------------------------------*/
 
@@ -560,7 +562,7 @@ nav ul li ul {
     list-style-type: none;
     border-left-style: solid;
     border-left-width: 1px;
-    border-color: #eee;
+    border-color: #acacac;
     margin-top: 1.5em;
 }
 
@@ -579,10 +581,11 @@ nav ul li ul li a::after {
     font-size: .75em;
 }
 
-
+/*
 nav code {
     background: none;
 }
+*/
 
 nav a {
     text-decoration: none;
@@ -675,12 +678,37 @@ figcaption {
 }
 */
 @page {
-    /* size: Letter; */
+    /* size: A4; */
     /* Change from the default size of A4 */
     /* margin: 2cm; */
     /* Set margin on each page */
 }
 
+/* From heres on my custom values */
+
 .lvalue {
     font-weight: normal;
+}
+
+.md-table td,
+.md-table th {
+    border-left: 0px;
+    border-right: 0px;
+    border-top-color: rgba(0, 0, 0, 0.80);
+    border-bottom-color: rgba(0, 0, 0, 0.80);
+}
+
+.md-table th {
+    border-top-width: 2px;
+    border-bottom-width: 2px;
+}
+
+.margin-left-20pc {
+    margin-left: 20%;
+}
+
+.center {
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
 }
