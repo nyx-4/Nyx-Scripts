@@ -32,21 +32,29 @@
 2. Each member will propose two questions before start of contest (Friday 00:00 PKT) via Push Request.
 3. Each member shall submit _1 Medium_, _2 Hard_ and _1 conundrum_ each month
 4. Each member will solve six questions submitted bu other three members.
-5. The solutions should be submitted before Sunday 23:59 PKT
+5. The solutions should be submitted before Monday 08:00 PKT
 6. Each member will grade the Question they proposed within a week of submission
 7. Allowed Resources: (Default Tier 2)
     - Tier 0: Documentation, StackOverflow, wikis
     - Tier 1: Tier 0 + interpreter/compiler, tutorials, GitHub
     - Tier 2: Tier 1 + LLM, friends, all other resources
 
+### How to participate:
+1. Each Monday before contest a file will be created for submitting Questions.
+2. Add your fair-share of Questions in alloted place.
+3. Wait for Firday, and upload Questions on Firday before noon (1200 PKT)
+4. Try to solve all problems uploaded by other contestents and paste final solution in alloted file
+5. Don't push your solutions before Sunday night, and deadline is Monday morning (0800 PKT)
+6. Check all solutions submitted to your problem and upload marks on Leaderboard within a week.
+7. **Do not upload problems before Friday, and do not submit too early.**
 
 ## Achievements
-| Name                               | Description                                              |
-| ---------------------------------- | -------------------------------------------------------- |
-| Supercalifragilisticexpialidocious | No one scores 4 stars in 4 consecutive duels             |
-| San Ti                             | get 3 🌞 (suns)                                           |
-| Hobo go-juu                        | get 6 🌙 (moons) in a single month                        |
-| Centenarian                        | Be the first to get hundred stars [1](#note-centenarian) |
+| Name                               | Description                                                |
+| ---------------------------------- | ---------------------------------------------------------- |
+| Supercalifragilisticexpialidocious | No one scores 4 stars in 4 consecutive duels               |
+| San Ti                             | get 3 🌞 (suns)                                             |
+| Hobo go-juu                        | get 6 🌙 (moons) in a single month                          |
+| Centenarian                        | Be the first to get hundred stars [1](#note-1-centenarian) |
 
 
 ## FAQ's
@@ -55,7 +63,7 @@
 
 
 ## Footnotes
-### Note (Centenarian)
+### Note 1 (Centenarian)
 - The first contestent with `self.stars >= 100 and (self.stars > other.stars for other in others)`.
 - Only one can ever have this achievement.
 
