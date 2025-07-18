@@ -135,10 +135,13 @@ Given a $m \times n$ grid of such coins, print out all moves it would take so th
 
 ### Output statement
 <!-- Here explain what the program should return, or output -->
-$$i, j - TR\\
-i, j - BL\\
-i, j - TR\\
-\vdots$$  
+```math
+\begin{aligned}
+&i, j &- &TR \\
+&i, j &- &BL \\
+&i, j &- &TR \\
+&&\vdots\end{aligned}
+```  
 
 where $i, j$ are the $x$ and $y$ coordinates of top-left square of selected $2 \times 2$ grid; $TR$ and $BL$ determines whether $top-right$ or $bottom-left$ coin is flipped
 
@@ -146,8 +149,12 @@ where $i, j$ are the $x$ and $y$ coordinates of top-left square of selected $2 \
 ### Example 1:
 **Input:** 2 3  
 **Output:** 
-$$0, 0 - TR\\
-0, 1 - BL$$  
+```math
+\begin{aligned}
+&0, 0 &- &TR\\
+&0, 1 &- &BL
+\end{aligned}
+```  
 
 **Explanation:**   
 Initial condition:  
@@ -174,13 +181,17 @@ After $0, 1 - BL$:
 ### Example 2:
 **Input:** 5 3  
 **Output:** 
-$$0, 0 - BL\\
-0, 1 - TR\\
-2, 0 - BL\\
-2, 1 - TR\\
-3, 0 - BL\\
-3, 1 - BL\\
-3, 0 - TR\\$$  
+```math
+\begin{aligned}
+&0, 0 &- &BL\\
+&0, 1 &- &TR\\
+&2, 0 &- &BL\\
+&2, 1 &- &TR\\
+&3, 0 &- &BL\\
+&3, 1 &- &BL\\
+&3, 0 &- &TR\\
+\end{aligned}
+```  
 
 **Explanation:**  
 Initial condition:
