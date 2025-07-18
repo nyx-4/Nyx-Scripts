@@ -19,7 +19,7 @@ end
 
 alias pamcan=pacman
 
-source ~/.config/omf/main.fish
+source $HOME/.config/omf/main.fish
 
 # function fish_prompt
 #   set_color cyan; echo (pwd)

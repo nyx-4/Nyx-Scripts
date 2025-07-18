@@ -8,28 +8,36 @@
 <!--    For more info, take a look at leetcode's Topics             -->
 <!-- Hints are completely optional, add max 3 hints                 -->
 <!--    If less than 3 hints are used, remove the others completely -->
+<!-- Give the source from where you copied the problem              -->
+<!--    or took inspiration from. (Source often contains solutions) -->
 
-<summary>Difficulty: Easy</summary>  
-<summary>Resources: Tier 2</summary>  
+_Difficulty_: Easy  
+_Resources_: Tier 2  
 <details>
     <summary>Topics</summary>  
 
-    `Topic 1` `Topic 2` ...
+`Topic 1` `Topic 2` ...
 </details>
 <details>
     <summary>Hint 1</summary>  
 
-    Edit this line only, don't change other lines/tags here.
+Edit this line only, or remove the detail tag completely.
 </details>
 <details>
     <summary>Hint 2</summary>  
 
-    Edit this line only, don't change other lines/tags here.
+Edit this line only, or remove the detail tag completely.
 </details>
 <details>
     <summary>Hint 3</summary>  
 
-    Edit this line only, don't change other lines/tags here.
+Edit this line only, or remove the detail tag completely.
+</details>
+<details>
+    <summary>Source of Problem / Similar Problems</summary>  
+
+1. http link or book name
+2. http link or book name
 </details>
 
 ### Problem statement
