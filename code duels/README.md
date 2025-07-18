@@ -29,7 +29,7 @@
 
 ### Rules of the Contests
 1. The Duel will take place every fortnight, starting from 18th of July.
-2. Each member will propose two questions before start of contest (Friday 00:00 PKT) via Push Request.
+2. Each member will propose two questions before start of contest (Friday 12:00 PKT) via Push Request.
 3. Each member shall submit _1 Medium_, _2 Hard_ and _1 conundrum_ each month
 4. Each member will solve six questions submitted bu other three members.
 5. The solutions should be submitted before Monday 08:00 PKT

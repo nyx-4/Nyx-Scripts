@@ -66,7 +66,7 @@ $$F_3 + F_4 + F_5 + F_6 + F_7 = 2 + 3 + 5 + 8 + 13 = 31$$
 **Input:** 10 10   
 **Output:** 5  
 **Explanation:** 
-$$F_10 = 55$$
+$$F_{10} = 55$$
 
 ### Example 3:
 **Input:** 314 15926  
@@ -135,21 +135,20 @@ Given a $m \times n$ grid of such coins, print out all moves it would take so th
 
 ### Output statement
 <!-- Here explain what the program should return, or output -->
-$$
-i, j - TR\\
+$$i, j - TR\\
 i, j - BL\\
 i, j - TR\\
-\vdots$$
+\vdots$$  
+
 where $i, j$ are the $x$ and $y$ coordinates of top-left square of selected $2 \times 2$ grid; $TR$ and $BL$ determines whether $top-right$ or $bottom-left$ coin is flipped
 
 <!-- Add 2 or 3 examples to better convey your problem statement -->
 ### Example 1:
 **Input:** 2 3  
 **Output:** 
-$$
-0, 0 - TR\\
-0, 1 - BL\\
-$$  
+$$0, 0 - TR\\
+0, 1 - BL$$  
+
 **Explanation:**   
 Initial condition:  
 |     | 0   | 1   |
@@ -175,15 +174,14 @@ After $0, 1 - BL$:
 ### Example 2:
 **Input:** 5 3  
 **Output:** 
-$$
-0, 0 - BL
-0, 1 - TR
-2, 0 - BL
-2, 1 - TR
-3, 0 - BL
-3, 1 - BL
-3, 0 - TR
-$$  
+$$0, 0 - BL\\
+0, 1 - TR\\
+2, 0 - BL\\
+2, 1 - TR\\
+3, 0 - BL\\
+3, 1 - BL\\
+3, 0 - TR\\$$  
+
 **Explanation:**  
 Initial condition:
 |     | 0   | 1   | 2   |
@@ -302,8 +300,8 @@ if __name__ == '__main__':
 ```
 
 ## Problem 9: _(Coin Partitions)_
-<summary>Difficulty: Easy</summary>  
-<summary>Resources: Tier 2</summary>  
+_Difficulty_: Easy  
+_Resources_: Tier 2  
 <details>
     <summary>Topics</summary>  
 
