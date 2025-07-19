@@ -70,9 +70,37 @@ Add return info...
 ### Starting code
 <!-- Add a good starting point, without revealing too much -->
 ```py
-def main():
+def main() -> None:
     ...
+
 
 if __name__ == '__main__':
     main()
 ```
+
+
+## Solution 1: _(tag line / problem name)_
+<!-- Make sure to properly document and test your code  -->
+### Final code
+```py
+def main() -> None:
+    ...
+
+
+if __name__ == "__main__":
+    main()
+```
+ssss
+<!-- Here write things that you have learned during ECD or used to  -->
+<!-- solve this ECD, i.e.,                                          -->
+<!--                                                                -->
+<!-- 1. if we need `fib(7) mod 10`, instead of calculating          -->
+<!-- `(fib(6) + fib(5)) mod 10`, a better alternative is to         -->
+<!-- calculate `(fib(6) mod 10 + fib(7) mod 10) mod 10`, because    -->
+<!-- `fib(6) + fib(5)` is adding two large numbers, which is slow   -->
+
+### Insights
+1. some insight, or trick you used.
+2. another insight, or trick you used.
+3. ...
+
