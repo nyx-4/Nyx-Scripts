@@ -90,7 +90,7 @@ def main() -> None:
 if __name__ == "__main__":
     main()
 ```
-ssss
+
 <!-- Here write things that you have learned during ECD or used to  -->
 <!-- solve this ECD, i.e.,                                          -->
 <!--                                                                -->
